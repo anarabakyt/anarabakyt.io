@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: #007bff;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #e3e3e3;
+}
+
+/* Input fields */
+input[type="text"],
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: 400;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Buttons, why 2? idk */
+  .submitButton{
+        display: block;
+        margin-left: auto;
+        padding: 15px 30px;
+        font-family: "Sofia Pro","Helvetica","Sans Serif";
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.333;
+        padding: 11px 30px;
+        border: 2px solid;
+        border-radius: 0;
+        border-top-right-radius: 20px;
+        text-decoration: none;
+        background: #0c6b5b;
+        color:#fff;
+        transition: all 0.5s;
+    }
+  
+.submitButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.submitButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.submitButton:hover span {
+    padding-right: 25px;
+}
+
+.submitButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+/* Media queries, tested on iphone14promax only */
+@media (max-width: 767px) {
+    form {
+        padding: 10px;
+    }
+}

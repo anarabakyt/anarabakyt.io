@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFDC Web to Case</title>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css.css">
+    </head>
+<body class ="sfdcBody">
+    <div class="sfdcContainer">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+        <input type=hidden name="orgid" value="00D8c0000024rLR">
+        <input type=hidden name="retURL" value="https://www.altoira.com/contact/">
+        
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+          <input type="hidden" name="debug" value=1>
+         <input type="hidden" name="debugEmail" value="sguven@altoira.com">     
+        <!--  ----------------------------------------------------------------------  -->
+<div class="inputFieldsRow1">
+
+            First Name <input type="text" id="firstName" required /><br/>
+            Last Name <input type="text" id="lastName" oninput="generateFullName()" required/><br/>
+    <!-- the fullname is hidden but used to send data to sfdc. -->
+
+            <label for="name"></label><input  id="name" maxlength="80" name="name" size="20"  type="hidden" /><br>
+
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+            
+            <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text"   /><br>
+            </div>
+      
+
+       
+
+        <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+            <div class="companyField">
+                <label for="company">Company</label><input  id="company"  maxlength="80" name="company" size="20" type="text" /><br>
+            </div>
+        <label for="description">Description</label><textarea name="description"></textarea><br>
+        <input class="submitButton" type="submit" name="submit">
+        <button class="submitButton" type="submit" name="submit">
+            <span>Submit</span>
+        </button>
+
+
+        </form>
+
+
+
+
+
+        <script src="script.js"></script>
+        </div>
+</body>
+</html>
